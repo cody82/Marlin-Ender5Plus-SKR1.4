@@ -16,11 +16,15 @@ and define:
 #define Z_MIN_PROBE_PIN P0_10
 
 Open Conditionals_LCD.h located in ..Marlin\src\inc.. and change these lines:
+
 #define HAS_CUSTOM_PROBE_PIN DISABLED(Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN)
+
 #define HOMING_Z_WITH_PROBE (Z_HOME_DIR < 0 &&!HAS_CUSTOM_PROBE_PIN)
 
 to:
+
 #define HAS_CUSTOM_PROBE_PIN true
+
 #define HOMING_Z_WITH_PROBE (Z_HOME_DIR < 0)
 
 Also the unused Z endstop pins must be shorted.
