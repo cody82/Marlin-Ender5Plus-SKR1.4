@@ -10,9 +10,11 @@ Marlin 2.0.5.3 configuration for Ender 5 Plus and BigTreeTech SKR1.4 Turbo + TMC
 https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/issues/207
 
 Comment out the line in Configuration.H:
+
 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 and define:
+
 #define Z_MIN_PROBE_PIN P0_10
 
 Open Conditionals_LCD.h located in ..Marlin\src\inc.. and change these lines:
